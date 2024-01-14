@@ -3,7 +3,7 @@ find_max:
 	mov cx,10
 	mov dx,[bx]
 	
-compare:
+com:
 	cmp dx,[bx+2]
 	jle next
 	jmp noswap
@@ -15,7 +15,7 @@ noswap:
 	add bx,2
 	sub cx,1
 	cmp cx,1
-	jne compare
+	jne com
 	ret
 	
 start:
